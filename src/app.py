@@ -1,14 +1,11 @@
 import argparse
 import tkinter as tk
 from tkinter import *
-import tkinter.font as font
 import logging
-# import webbrowser
-# import random
-from get_faces_from_camera import TrainingDataCollector
-from faces_embedding import GenerateFaceEmbedding
-from train_softmax import TrainFaceRecogModel
-from facePredictor import FacePredictor
+from utils_getting_faces.get_faces_from_camera import TrainingDataCollector
+from utils_face_embedding.faces_embedding import GenerateFaceEmbedding
+from utils_train.train_softmax import TrainFaceRecogModel
+from utils_prediction.facePredictor import FacePredictor
 class RegistrationModule:
     def __init__(self,logFileName):
         self.logFileName= logFileName
@@ -65,9 +62,6 @@ class RegistrationModule:
         self.mobileNoTxt.place(x=575, y=140)
         lbl3=tk.Label(self.window,text='Notification:',width=15,fg='white',bg='#363e75',height=2,
                       font=('time',15))
-        #self.message = tk.Label(self.window, text="", bg="white", fg="black", width=30, height=1,
-                                #activebackground="#e47911", font=('times', 15))
-        #self.message.place(x=220, y=220)
         lbl3.place(x=80, y=260)
         self.message = tk.Label(self.window, text="", bg="#bbc7d4", fg="black", width=58, height=2,
                                 activebackground="#bbc7d4",
@@ -86,8 +80,8 @@ class RegistrationModule:
         quitWindow=tk.Button(self.window,text="Quit",command=self.close_window,fg='white',bg='#363e75',width=10,height=2,
                              activebackground='#118ce1',font=('times',15,'bold'))
         quitWindow.place(x=650,y=510)
-        #link2=tk.Label(self.window,text='Copyright@')
-        label=tk.Label(self.window)
+
+        #label=tk.Label(self.window)
 
         self.window.mainloop()
         logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s',filename=self.logFileName,
@@ -95,8 +89,8 @@ class RegistrationModule:
 
 
     def collectUserImageForRegistration(self):
-        clientIDVal = (self.clientIDTxt.get())
-        empIDVal = self.empIDTxt.get()
+        # clientIDVal = (self.clientIDTxt.get())
+        # empIDVal = self.empIDTxt.get()
         name = (self.empNameTxt.get())
         ap=argparse.ArgumentParser()
 
