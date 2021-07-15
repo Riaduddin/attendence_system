@@ -6,8 +6,10 @@
   * [Installation](#installation)
   * [Technologies Used](#technologies-used)
 ## Demo
-Look of the App
-![](image.png)
+[Click on the link or click on the image for the demo video](https://youtu.be/JxTImzagGAc)
+
+First Look of the App
+[![](image.png)](https://youtu.be/JxTImzagGAc)
 ## Overview
 This is a simple Face Recognition Attendence System user friendly desktop app.
 This app can take images, train and predict the users face on real time. Users only have to click the button, the app automatically do the all things. He does not have to  give images manutally, the app automatically take images after clicking on the Take Image button.  
